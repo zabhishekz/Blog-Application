@@ -8,7 +8,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import MenuBar from "./componenets/MenuBar";
+import MenuBar from "./components/MenuBar";
 
 function App() {
   return (

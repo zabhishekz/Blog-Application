@@ -5,20 +5,15 @@
   "main": "index.js",
   "scripts": {
     "serve": "node index",
-    "start": "nodemon index.js",
-    "postinstall": "semantic-ui-css-patch"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@semantic-ui-react/css-patch": "^1.0.0",
     "apollo-server": "^3.6.4",
     "bcryptjs": "^2.4.3",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.6",
-    "react-router-dom": "^5.0.1",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.1.2"
+    "mongoose": "^6.2.6"
   }
 }

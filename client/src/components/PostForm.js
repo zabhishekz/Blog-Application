@@ -26,20 +26,19 @@ function PostForm() {
   function createPostCallback() {
     createPost();
   }
-  console.log("kdfnsk", error);
   return (
     <>
       <Form onSubmit={onSubmit}>
         <h2>Create a post:</h2>
         <Form.Field>
-          <Form.Input
+          <Form.TextArea
             placeholder="Hi World!"
             name="body"
             onChange={onChange}
             value={values.body}
             error={error ? true : false}
           />
-          <Button type="submit" color="teal">
+          <Button type="submit" color="yellow">
             Submit
           </Button>
         </Form.Field>

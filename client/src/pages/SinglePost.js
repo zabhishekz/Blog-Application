@@ -47,7 +47,13 @@ function SinglePost(props) {
 
   let postMarkup;
   if (!getPost) {
-    postMarkup = <p>Loading post..</p>;
+    postMarkup = (
+      <h2 style={{ textAlign: "center" }}>
+        <Icon loading name="spinner" />
+        <br />
+        Loading post...
+      </h2>
+    );
   } else {
     const {
       id,
@@ -89,7 +95,7 @@ function SinglePost(props) {
                       onClick={() => console.log("Comment on post")}
                     >
                       <Button basic color="blue">
-                        <Icon name="comments" />
+                        <Icon name="comment" />
                       </Button>
                       <Label basic color="blue" pointing="left">
                         {commentCount}
@@ -118,7 +124,7 @@ function SinglePost(props) {
                       />
                       <button
                         type="submit"
-                        className="ui button teal"
+                        className="ui button yellow"
                         disabled={comment.trim() === ""}
                         onClick={submitComment}
                       >

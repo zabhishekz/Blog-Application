@@ -1,3 +1,5 @@
-# MERNG Social Media Application
+# ExpressIt!
 
-Visit: https://social-media-app-289.netlify.app/
+## A Blog Application using MERNG stack
+
+Visit: https://blog-app-289.netlify.app/

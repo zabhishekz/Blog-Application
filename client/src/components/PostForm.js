@@ -31,10 +31,10 @@ function PostForm() {
   return (
     <>
       <Form onSubmit={onSubmit} className="cardStyle">
-        <h2>Create a post:</h2>
+        <h2>Create a new blog:</h2>
         <Form.Field>
-          <Form.TextArea
-            placeholder="Ttile"
+          <Form.Input
+            placeholder="Title"
             name="title"
             onChange={onChange}
             value={values.title}

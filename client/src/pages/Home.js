@@ -15,15 +15,15 @@ function Home() {
 
   return (
     <Grid>
-      <Grid.Row className="page-title">
-        <h1>Recent Posts</h1>
-      </Grid.Row>
       <Grid.Row>
         {user && (
           <Grid.Column>
             <PostForm />
           </Grid.Column>
         )}
+      </Grid.Row>
+      <Grid.Row className="page-title">
+        <h1>Recent Blogs</h1>
       </Grid.Row>
       <Grid.Row columns={2}>
         {loading ? (

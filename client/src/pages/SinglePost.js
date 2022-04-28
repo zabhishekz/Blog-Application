@@ -81,8 +81,10 @@ function SinglePost(props) {
             <Card fluid>
               <Card.Content>
                 <Card.Header>{title}</Card.Header>
-                <Card.Meta>{username}</Card.Meta>
-                {/* <Card.Meta>{moment(createdAt).fromNow()}</Card.Meta> */}
+                <Card.Meta>
+                  {username} | {moment(createdAt).fromNow()}
+                </Card.Meta>
+
                 <Card.Description>{body}</Card.Description>
               </Card.Content>
               <hr />

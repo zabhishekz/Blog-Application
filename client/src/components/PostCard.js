@@ -30,8 +30,9 @@ function PostCard({
           src="https://semantic-ui.com/images/avatar/small/nan.jpg"
         />
         <Card.Header>{title}</Card.Header>
-        <Card.Meta>{username}</Card.Meta>
-        {/* <Card.Meta>{moment(createdAt).fromNow(true)}</Card.Meta> */}
+        <Card.Meta>
+          {username} | {moment(createdAt).fromNow(true)}
+        </Card.Meta>
         <Card.Description>
           {body.length > 200 ? `${body.substring(0, 200)}...` : body}
         </Card.Description>

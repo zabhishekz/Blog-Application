@@ -8,7 +8,16 @@ import LikeButton from "./LikeButton";
 import DeleteButton from "./DeleteButton";
 import MyPopup from "../util/MyPopup";
 function PostCard({
-  post: { body, createdAt, id, username, likeCount, commentCount, likes },
+  post: {
+    title,
+    body,
+    createdAt,
+    id,
+    username,
+    likeCount,
+    commentCount,
+    likes,
+  },
 }) {
   const { user } = useContext(AuthContext);
 
@@ -20,8 +29,9 @@ function PostCard({
           size="mini"
           src="https://semantic-ui.com/images/avatar/small/nan.jpg"
         />
-        <Card.Header>{username}</Card.Header>
-        <Card.Meta>{moment(createdAt).fromNow(true)}</Card.Meta>
+        <Card.Header>{title}</Card.Header>
+        <Card.Meta>{username}</Card.Meta>
+        {/* <Card.Meta>{moment(createdAt).fromNow(true)}</Card.Meta> */}
         <Card.Description>
           {body.length > 200 ? `${body.substring(0, 200)}...` : body}
         </Card.Description>

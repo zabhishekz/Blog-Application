@@ -9,6 +9,7 @@ import { FETCH_POSTS_QUERY } from "../util/graphql";
 function PostForm() {
   const { values, onChange, onSubmit } = useForm(createPostCallback, {
     body: "",
+    title: "",
   });
 
   const [createPost, { error }] = useMutation(CREATE_POST_MUTATION, {
@@ -20,6 +21,7 @@ function PostForm() {
       const posts = [result.data.createPost, ...data.getPosts];
       proxy.writeQuery({ query: FETCH_POSTS_QUERY, data: { getPosts: posts } });
       values.body = "";
+      values.title = "";
     },
   });
 
@@ -31,6 +33,13 @@ function PostForm() {
       <Form onSubmit={onSubmit} className="cardStyle">
         <h2>Create a post:</h2>
         <Form.Field>
+          <Form.TextArea
+            placeholder="Ttile"
+            name="title"
+            onChange={onChange}
+            value={values.title}
+            error={error ? true : false}
+          />
           <Form.TextArea
             placeholder="Hi World!"
             name="body"
@@ -55,9 +64,10 @@ function PostForm() {
 }
 
 const CREATE_POST_MUTATION = gql`
-  mutation createPost($body: String!) {
-    createPost(body: $body) {
+  mutation createPost($title: String!, $body: String!) {
+    createPost(title: $title, body: $body) {
       id
+      title
       body
       createdAt
       username

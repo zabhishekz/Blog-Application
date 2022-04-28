@@ -57,6 +57,7 @@ function SinglePost(props) {
   } else {
     const {
       id,
+      title,
       body,
       createdAt,
       username,
@@ -79,8 +80,9 @@ function SinglePost(props) {
           <Grid.Column width={10}>
             <Card fluid>
               <Card.Content>
-                <Card.Header>{username}</Card.Header>
-                <Card.Meta>{moment(createdAt).fromNow()}</Card.Meta>
+                <Card.Header>{title}</Card.Header>
+                <Card.Meta>{username}</Card.Meta>
+                {/* <Card.Meta>{moment(createdAt).fromNow()}</Card.Meta> */}
                 <Card.Description>{body}</Card.Description>
               </Card.Content>
               <hr />
@@ -174,6 +176,7 @@ const FETCH_POST_QUERY = gql`
   query ($postId: ID!) {
     getPost(postId: $postId) {
       id
+      title
       body
       createdAt
       username

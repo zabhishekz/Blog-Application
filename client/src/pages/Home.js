@@ -25,7 +25,7 @@ function Home() {
           </Grid.Column>
         )}
       </Grid.Row>
-      <Grid.Row columns={3}>
+      <Grid.Row columns={2}>
         {loading ? (
           <h2>
             <Icon loading name="spinner" />

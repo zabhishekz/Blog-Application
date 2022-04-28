@@ -8,9 +8,22 @@
 .form-container {
   width: 400px;
   margin: auto;
+  padding: 2%;
+  background-color: beige;
+  font-style: italic;
+}
+
+.form-container h1 {
+  text-align: center;
 }
 
 .ui.yellow.button:focus,
 .ui.yellow.buttons .button:focus {
   background-color: #ffd700;
+}
+
+.cardStyle {
+  background-color: beige;
+  padding: 1.6%;
+  font-style: italic;
 }

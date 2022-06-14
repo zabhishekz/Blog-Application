@@ -9,7 +9,7 @@ import {
 import { setContext } from "apollo-link-context";
 
 const httpLink = new HttpLink({
-  uri: "https://social-media-app-289.herokuapp.com/",
+  uri: "https://blog-app-289.herokuapp.com/",
 });
 
 const authLink = setContext(() => {
